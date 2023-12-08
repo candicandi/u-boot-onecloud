@@ -109,6 +109,10 @@ jobs:
 
           ./AmlImg pack build/eMMC.burn.img pack/
 
+      - name: Install hub
+        uses: geertvdc/setup-hub@master
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
